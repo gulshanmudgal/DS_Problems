@@ -15,7 +15,7 @@ namespace Heap
         /// <param name="nums"></param>
         /// <param name="k"></param>
         /// <returns></returns>
-        public int FindKthLargest(int[] nums, int k)
+        public static int FindKthLargest(int[] nums, int k)
         {
             PriorityQueue<int, int> minHeap = new PriorityQueue<int, int>();
 

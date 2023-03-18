@@ -14,7 +14,7 @@ namespace Heap
         /// <param name="numbers"></param>
         /// <param name="kth index"></param>
         /// <returns></returns>
-        public static int getSmallestNumber(int[] numbers, int k)
+        public static int GetKthSmallestNumber(int[] numbers, int k)
         {
             PriorityQueue<int, int> maxHeap = new PriorityQueue<int, int>();
 

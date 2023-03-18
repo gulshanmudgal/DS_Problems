@@ -9,3 +9,7 @@ Console.WriteLine(resultPB02);
 
 int[] resultPB03 = PB_03_K_Largest.GetKLargest(input, 3);
 Console.WriteLine(String.Join(',', resultPB03));
+
+int[] nearlySortedInput = new int[] { 6, 5, 3, 2, 8, 10, 9 };
+int[] resultPB04 = PB_04_Sort_K_Sorted.GetNearlySorted(nearlySortedInput, 3);
+Console.WriteLine(String.Join(',', resultPB04));

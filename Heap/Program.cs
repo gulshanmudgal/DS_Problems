@@ -17,3 +17,22 @@ Console.WriteLine(String.Join(',', resultPB04));
 int[] inputPB05 = new int[5] { 1, 2, 3, 4, 5 };
 IList<int> resultPB05 = PB_05_K_Closest.FindClosestElements(inputPB05, 4, 3);
 Console.WriteLine(String.Join(',', resultPB05));
+
+
+int[][] inputPB08 = new int[3][];
+inputPB08[0] = new int[2];
+inputPB08[1] = new int[2];
+inputPB08[2] = new int[2];
+inputPB08[0][0] = 3;
+inputPB08[0][1] = 3;
+inputPB08[1][0] = 5;
+inputPB08[1][1] = -1;
+inputPB08[2][0] = -2;
+inputPB08[2][1] = 4;
+int[][] resultPB08 = PB_08_Closeset_Points.KClosest(inputPB08, 2);
+Console.WriteLine("PB08 Reslts");
+foreach (var item in resultPB08)
+{
+    Console.WriteLine(String.Join(',', item));
+}
+Console.WriteLine();

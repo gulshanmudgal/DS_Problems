@@ -36,3 +36,7 @@ foreach (var item in resultPB08)
     Console.WriteLine(String.Join(',', item));
 }
 Console.WriteLine();
+
+long[] inputPB09 = new long[4] { 4, 3, 2, 6 };
+long resultPB09 = PB_09_Minimum_Cost.MinCost(inputPB09);
+Console.WriteLine(resultPB09);

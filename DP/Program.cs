@@ -16,15 +16,21 @@ namespace DP
 
             #region Climbing Stairs
             Console.WriteLine("************************************** Climbing Stairs **************************************");
-            var stairsResult = Climb_Stairs.ClimbStairs(5);
-            Console.WriteLine(stairsResult);
+            // var stairsResult = Climb_Stairs.ClimbStairs(5);
+            // var stairsResultUnoptimized = Climb_Stairs.ClimbStairs_UnOptimized(5);
+            // var stairsResultMemoized = Climb_Stairs.ClimbStairs_Memoization(5);
+            // Console.WriteLine(stairsResult);
+            // Console.WriteLine(stairsResultUnoptimized);
+            // Console.WriteLine(stairsResultMemoized);
+            // Console.WriteLine(Climb_Stairs.Climb_StairsDP(5));
+            Console.WriteLine(Climb_Stairs.Climb_StairsMemOpt(5));
             Console.WriteLine();
             #endregion
 
             #region Frog Jump
             Console.WriteLine("************************************** Frog Jump **************************************");
-            int[] heights = new int[] { 10, 20, 30, 10 };
-            var minCost = Frog_Jump.FrogJump(4, heights);
+            int[] heights = new int[] { 2, 1, 3, 5, 4 };
+            var minCost = Frog_Jump.FrogJump(5, heights);
             Console.WriteLine("Min Cost " + minCost);
             Console.WriteLine();
             #endregion

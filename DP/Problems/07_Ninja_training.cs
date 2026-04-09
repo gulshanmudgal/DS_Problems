@@ -13,6 +13,33 @@ public class NinjaTrainingSolver
     /// <param name="lastTask"></param>
     /// <param name="dp"></param>
     /// <returns></returns>
+    /// 
+    
+    public static int GetMaxPointsRec(int[][] points, int last, int n)
+    {
+        if(n == 0)
+        {
+            int max = Int16.MinValue;
+            for(int index = 0; index < points[0].Length; index++)
+            {
+                if(index != last)
+                {
+                    max = Math.Max(max, points[n][index]);
+                }
+            }
+
+            return max;
+        }
+
+        int maxPoints = Int16.MinValue;
+        for(int index = 0; index < points[0].Length; index++)
+        {
+            maxPoints = Math.Max(maxPoints, points[n][index] + GetMaxPointsRec(points, index, n - 1));
+        }
+
+        return maxPoints;
+    }
+
     public static int GetMaxPoints(int[][] points, int n, int lastTask, int[][] dp)
     {
         if(n == 0)
@@ -114,6 +141,9 @@ public class NinjaTrainingSolver
     /// <returns></returns>
     public static int NinjaTraining(int[][] matrix)
     {
+
+        // return GetMaxPointsRec(matrix, matrix.Length - 1, matrix.Length - 1);
+
         int[][] dp = new int[matrix.Length][];
 
         for(int i = 0; i < matrix.Length; i++)

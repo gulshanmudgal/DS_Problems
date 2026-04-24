@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 
+#region Helper Methods
 void PrintLists(List<int> list, string indent = "")
 {
 	if (list == null)
@@ -36,7 +37,40 @@ void PrintListOfLists(List<List<int>> lists)
 	Console.WriteLine("]");
 }
 
-#region
+void ClearConsole()
+{
+	try
+	{
+		if (!Console.IsOutputRedirected)
+		{
+			Console.Clear();
+			return;
+		}
+	}
+	catch
+	{
+		// ignore and try fallback
+	}
+
+	// Fallback: ANSI clear (works in terminals that support it)
+	try
+	{
+		Console.Write("\u001b[2J\u001b[H");
+		Console.Out.Flush();
+		return;
+	}
+	catch
+	{
+		// ignore
+	}
+
+	// Last resort: emit several new lines to push previous output out of view
+	for (int i = 0; i < 50; i++) Console.WriteLine();
+}
+
+#endregion
+
+#region Power Set Problem
 var nums = new List<int>() {3, 2, 1};
 var sol = PowerSetSolution.PowerSet(nums);
 PrintListOfLists(sol);

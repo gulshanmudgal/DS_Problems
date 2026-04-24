@@ -71,8 +71,14 @@ void ClearConsole()
 #endregion
 
 #region Power Set Problem
+ClearConsole();
 var nums = new List<int>() {3, 2, 1};
 var sol = PowerSetSolution.PowerSet(nums);
 PrintListOfLists(sol);
+#endregion
 
+#region Count all subsequences with sum K
+ClearConsole();
+var answer = CountSubsequenceWithTargetSumSolution.CountSubsequenceWithTargetSum(new int[5] {4,9,2,5,1}, 10);
+Console.WriteLine(answer);
 #endregion

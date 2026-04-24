@@ -82,3 +82,9 @@ ClearConsole();
 var answer = CountSubsequenceWithTargetSumSolution.CountSubsequenceWithTargetSum(new int[5] {4,9,2,5,1}, 10);
 Console.WriteLine(answer);
 #endregion
+
+#region check if a subsequence exists with sum K
+ClearConsole();
+var doesExist = CheckSubsequenceSumSolution.CheckSubsequenceSum(new List<int> {4,9,2,5,1}, 10);
+Console.WriteLine(doesExist);
+#endregion

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Runtime.CompilerServices;
 
 #region Helper Methods
 void PrintLists(List<int> list, string indent = "")
@@ -87,4 +88,18 @@ Console.WriteLine(answer);
 ClearConsole();
 var doesExist = CheckSubsequenceSumSolution.CheckSubsequenceSum(new List<int> {4,9,2,5,1}, 10);
 Console.WriteLine(doesExist);
+#endregion
+
+# region Combination Sum
+ClearConsole();
+var candidates = new int[4] {2, 3, 5, 4};
+var combSum1Res = CombinationSumSolution.CombinationSum(candidates, 7);
+PrintListOfLists(combSum1Res);
+#endregion
+
+#region Combination Sum Optimised
+// ClearConsole();
+var candidates2 = new int[4] {2, 3, 5, 4};
+var combSum2res = CombinationSumOptimisedSolution.CombinationSum(candidates2, 7);
+PrintListOfLists(combSum2res);
 #endregion

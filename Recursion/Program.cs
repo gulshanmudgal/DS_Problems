@@ -22,6 +22,26 @@ void PrintLists(List<int> list, string indent = "")
 	Console.WriteLine("]");
 }
 
+void PrintListsSTR(List<string> list, string indent = "")
+{
+	if (list == null)
+	{
+		Console.WriteLine(indent + "null");
+		return;
+	}
+
+	Console.WriteLine(indent + "[");
+	for (int i = 0; i < list.Count; i++)
+	{
+		var row = list[i] ?? string.Empty;
+		var spaced = string.Join(" ", row.ToCharArray());
+		var suffix = i < list.Count - 1 ? "," : "";
+		Console.WriteLine(indent + "  " + spaced + suffix);
+	}
+	Console.WriteLine(indent + "]");
+}
+
+
 void PrintListOfLists(List<List<int>> lists)
 {
 	if (lists == null)
@@ -34,6 +54,23 @@ void PrintListOfLists(List<List<int>> lists)
 	foreach (var l in lists)
 	{
 		PrintLists(l, "  ");
+	}
+	Console.WriteLine("]");
+}
+
+void PrintListOfListsStr(List<List<string>> lists)
+{
+	if (lists == null)
+	{
+		Console.WriteLine("null");
+		return;
+	}
+
+	Console.WriteLine("[");
+	foreach (var l in lists)
+	{
+		PrintListsSTR(l, "  ");
+		Console.WriteLine();
 	}
 	Console.WriteLine("]");
 }
@@ -102,4 +139,11 @@ PrintListOfLists(combSum1Res);
 var candidates2 = new int[4] {2, 3, 5, 4};
 var combSum2res = CombinationSumOptimisedSolution.CombinationSum(candidates2, 7);
 PrintListOfLists(combSum2res);
+#endregion
+
+#region N Queen
+ClearConsole();
+var n = 8;
+var nQueenRes = NQueenSolution.SolveNQueens(n);
+PrintListOfListsStr(nQueenRes);
 #endregion

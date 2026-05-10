@@ -135,7 +135,6 @@ PrintListOfLists(combSum1Res);
 #endregion
 
 #region Combination Sum Optimised
-// ClearConsole();
 var candidates2 = new int[4] {2, 3, 5, 4};
 var combSum2res = CombinationSumOptimisedSolution.CombinationSum(candidates2, 7);
 PrintListOfLists(combSum2res);
@@ -143,7 +142,29 @@ PrintListOfLists(combSum2res);
 
 #region N Queen
 ClearConsole();
-var n = 8;
+var n = 4;
 var nQueenRes = NQueenSolution.SolveNQueens(n);
 PrintListOfListsStr(nQueenRes);
+#endregion
+
+#region  M-Color Problem
+ClearConsole();
+var edges1 = new List<List<int>>
+{
+    new List<int> { 0, 1 },
+    new List<int> { 1, 2 },
+    new List<int> { 2, 3 },
+    new List<int> { 3, 0 },
+    new List<int> { 0, 2 }
+};
+
+var edges = new List<List<int>>
+{
+    new List<int> { 0, 1 },
+    new List<int> { 1, 2 },
+    new List<int> { 0, 2 }
+};
+
+var isColoringAllowed = MColorSolution.GraphColoring(edges, 2, 3);
+Console.WriteLine($"IS Possible: {isColoringAllowed}");
 #endregion

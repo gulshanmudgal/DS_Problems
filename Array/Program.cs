@@ -88,7 +88,9 @@ namespace Array
             int[] nums = [2, 7, 11, 15];
             int target = 9;
 
-            var twoSumResult = TwoSum.TwoSumBetter(nums, target);
+            // var twoSumResult = TwoSum.TwoSumBetter(nums, target);
+            // var twoSumResult = TwoSum.TwoSumSol(nums, target);
+            var twoSumResult = TwoSum.TwoSumSol2P(nums, target);
             PrintArray(twoSumResult);
             Console.WriteLine();
             #endregion

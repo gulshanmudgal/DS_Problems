@@ -15,6 +15,12 @@ namespace Array
             Console.WriteLine();
             #endregion
 
+            #region Remove Duplicates
+            int[] inputs = {0, 0, 3, 3, 5, 6};
+            int count = RemoveDuplicatesSolution.removeDuplicates(inputs.ToList());
+            Console.WriteLine($"Unique Count {count}");
+            #endregion
+
             #region Left Rotate an Array by one
             int[] rotateByOneInput = { 1, 2, 3, 4, 5, 6, 7 };
             LeftRotateByOne.Rotate(rotateByOneInput);

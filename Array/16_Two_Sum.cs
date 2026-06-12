@@ -73,7 +73,7 @@ namespace Array
                 int sum = pairs[left].value + pairs[right].value;
                 if(sum == target)
                 {
-                    return new int[2] {left, right};
+                    return new int[2] {pairs[left].index, pairs[right].index};
                 }
 
                 if(sum < target)

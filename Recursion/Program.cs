@@ -41,7 +41,6 @@ void PrintListsSTR(List<string> list, string indent = "")
 	Console.WriteLine(indent + "]");
 }
 
-
 void PrintListOfLists(List<List<int>> lists)
 {
 	if (lists == null)
@@ -74,6 +73,15 @@ void PrintListOfListsStr(List<List<string>> lists)
 	}
 	Console.WriteLine("]");
 }
+
+void PrintListOfListsStgr(IList<IList<string>> data)
+{
+    foreach (var row in data)
+    {
+        Console.WriteLine(string.Join(", ", row));
+    }
+}
+
 
 void ClearConsole()
 {
@@ -167,4 +175,10 @@ var edges = new List<List<int>>
 
 var isColoringAllowed = MColorSolution.GraphColoring(edges, 2, 3);
 Console.WriteLine($"IS Possible: {isColoringAllowed}");
+#endregion
+
+#region Palindrome Partitioning
+ClearConsole();
+var partitions = PalindromePartitioningSolution.Partition("aabb");
+PrintListOfListsStgr(partitions);
 #endregion

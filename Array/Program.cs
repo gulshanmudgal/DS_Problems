@@ -169,6 +169,12 @@ namespace Array
             PrintNestedList(fourSumResult);
             Console.WriteLine();
             #endregion
+
+            #region Sort Colors
+            int[] sortColorsInput = [2,0,2,1,1,0];
+            SortColors.SortColorsSolution(sortColorsInput);
+            PrintArray(sortColorsInput);
+            #endregion
         }
 
         private static void PrintArray(int[] nums)

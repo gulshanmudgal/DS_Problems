@@ -180,6 +180,13 @@ namespace Array
             int[] majorityElementCount = [3,2,3];
             Console.WriteLine(MajorityElement.MajorityElementSolMooresVotingApprch(majorityElementCount));
             #endregion
+
+            #region  Maximum SubArray Kadan's Algo
+            int[] maximumSubArray = [-2,1,-3,4,-1,2,1,-5,4];
+            Console.WriteLine(MaximumSubArray.MaximumSubArraySol(maximumSubArray));
+            var maxSumSub = MaximumSubArray.MaximumSubArraySolWithIndex(maximumSubArray);
+            Console.WriteLine($"Starting Index = {maxSumSub.start} and End index = {maxSumSub.end}");
+            #endregion
         }
 
         private static void PrintArray(int[] nums)

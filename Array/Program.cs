@@ -175,6 +175,11 @@ namespace Array
             SortColors.SortColorsSolution(sortColorsInput);
             PrintArray(sortColorsInput);
             #endregion
+
+            #region Majority Element
+            int[] majorityElementCount = [3,2,3];
+            Console.WriteLine(MajorityElement.MajorityElementSolMooresVotingApprch(majorityElementCount));
+            #endregion
         }
 
         private static void PrintArray(int[] nums)

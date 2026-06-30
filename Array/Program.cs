@@ -192,6 +192,12 @@ namespace Array
             int[] arrNums = [2, 4, 5, -1, -3, -4, 7];
             var arrangedNumbers = ArrangeArrayBySign.ArrangeArrayBySignSol(arrNums);
             #endregion
+
+            #region Majority element 2
+            int[] manorityElements2Nums = [1, 2, 1, 1, 3, 2, 2];
+            var majorityElements2Res = MajorityElement2.MajorityElements2Sol(manorityElements2Nums);
+            PrintList(majorityElements2Res);
+            #endregion
         }
 
         private static void PrintArray(int[] nums)

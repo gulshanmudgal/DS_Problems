@@ -198,6 +198,14 @@ namespace Array
             var majorityElements2Res = MajorityElement2.MajorityElements2Sol(manorityElements2Nums);
             PrintList(majorityElements2Res);
             #endregion
+
+            #region Largest Subarray with sum Zero
+            Console.WriteLine("**************************************Largest Subarray with sum Zero**************************************");
+            // int[] largestSubArrWithSumZeroInp = [15, -2, 2, -8, 1, 7, 10, 23];
+            int[] largestSubArrWithSumZeroInp = [1,-1,3,2,-2,-3,4];
+            int largestSubArrWithSumZeroRes = LargestSubArrayWithSumZero.LargestSubArrayWithSumZeroSol(largestSubArrWithSumZeroInp);
+            Console.WriteLine($"Largest SubArray with sum zero = {largestSubArrWithSumZeroRes}");
+            #endregion
         }
 
         private static void PrintArray(int[] nums)

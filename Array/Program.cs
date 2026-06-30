@@ -187,6 +187,11 @@ namespace Array
             var maxSumSub = MaximumSubArray.MaximumSubArraySolWithIndex(maximumSubArray);
             Console.WriteLine($"Starting Index = {maxSumSub.start} and End index = {maxSumSub.end}");
             #endregion
+
+            #region Ararnge Array of Numbers by Sign
+            int[] arrNums = [2, 4, 5, -1, -3, -4, 7];
+            var arrangedNumbers = ArrangeArrayBySign.ArrangeArrayBySignSol(arrNums);
+            #endregion
         }
 
         private static void PrintArray(int[] nums)

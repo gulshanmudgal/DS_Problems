@@ -210,6 +210,11 @@ namespace Array
             int largestSubArrWithSumZeroRes = LargestSubArrayWithSumZero.LargestSubArrayWithSumZeroSol(largestSubArrWithSumZeroInp);
             Console.WriteLine($"Largest SubArray with sum zero = {largestSubArrWithSumZeroRes}");
             #endregion
+
+            #region Merge Intervals
+            int[][] intervals = [[1,5],[3,6],[8,10],[15,18]];
+            var mergedIntervals = MergeIntervals.Merge(intervals);
+            #endregion
         }
 
         private static void PrintArray(int[] nums)

@@ -42,7 +42,7 @@ namespace Array
                 for(i = 0; i < positives.Count; i++)
                 {
                     arrangedNums[2*i] = positives[i];
-                    arrangedNums[2*i + 1] = negatives[i+1];
+                    arrangedNums[2*i + 1] = negatives[i];
                 }
 
                 for(int j = 2*i; j < nums.Length; j++)

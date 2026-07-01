@@ -189,8 +189,12 @@ namespace Array
             #endregion
 
             #region Ararnge Array of Numbers by Sign
-            int[] arrNums = [2, 4, 5, -1, -3, -4, 7];
-            var arrangedNumbers = ArrangeArrayBySign.ArrangeArrayBySignSol(arrNums);
+            int[] arrNumsInp1 = [2, 4, 5, -1, -3, -4, 7];
+            int[] arrNumsInp2 = [3, 1, -2, -5, 2, -4];
+            int[] arrNumsInp3 = [2, 4, -1, -3, -5, -7];
+            var arrangedNumbers1 = ArrangeArrayBySign.ArrangeArrayBySignSol(arrNumsInp1);
+            var arrangedNumbers2 = ArrangeArrayBySign.ArrangeArrayBySignSol(arrNumsInp2);
+            var arrangedNumbers3 = ArrangeArrayBySign.ArrangeArrayBySignSol(arrNumsInp3);
             #endregion
 
             #region Majority element 2

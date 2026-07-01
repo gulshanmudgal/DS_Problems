@@ -81,9 +81,6 @@ namespace Array
             Console.WriteLine();
             #endregion
 
-            #region
-            #endregion
-
             #region Two Sum
             int[] nums = [2, 7, 11, 15];
             int target = 9;
@@ -214,6 +211,15 @@ namespace Array
             #region Merge Intervals
             int[][] intervals = [[1,5],[3,6],[8,10],[15,18]];
             var mergedIntervals = MergeIntervals.Merge(intervals);
+            #endregion
+
+            #region Merge Sorted Arrays
+            Console.WriteLine();
+            int[] sortedNums1 = [-5, -2, 4, 5];
+            int[] sortedNums2 = [-3, 1, 8];
+            MergerSortedArrays.Merge(sortedNums1, 4, sortedNums2, 3);
+            PrintArray(sortedNums1);
+            PrintArray(sortedNums2);
             #endregion
         }
 

@@ -36,6 +36,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DP", "DP\DP.csproj", "{4F83
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recursion", "Recursion\Recursion.csproj", "{B14AF372-D2C1-4A8E-B742-53DFBBC1B062}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting", "Sorting\Sorting.csproj", "{993CAB42-0819-4D45-8E27-C34240AF61E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -130,6 +132,18 @@ Global
 		{B14AF372-D2C1-4A8E-B742-53DFBBC1B062}.Release|x64.Build.0 = Release|Any CPU
 		{B14AF372-D2C1-4A8E-B742-53DFBBC1B062}.Release|x86.ActiveCfg = Release|Any CPU
 		{B14AF372-D2C1-4A8E-B742-53DFBBC1B062}.Release|x86.Build.0 = Release|Any CPU
+		{993CAB42-0819-4D45-8E27-C34240AF61E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{993CAB42-0819-4D45-8E27-C34240AF61E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{993CAB42-0819-4D45-8E27-C34240AF61E3}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{993CAB42-0819-4D45-8E27-C34240AF61E3}.Debug|x64.Build.0 = Debug|Any CPU
+		{993CAB42-0819-4D45-8E27-C34240AF61E3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{993CAB42-0819-4D45-8E27-C34240AF61E3}.Debug|x86.Build.0 = Debug|Any CPU
+		{993CAB42-0819-4D45-8E27-C34240AF61E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{993CAB42-0819-4D45-8E27-C34240AF61E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{993CAB42-0819-4D45-8E27-C34240AF61E3}.Release|x64.ActiveCfg = Release|Any CPU
+		{993CAB42-0819-4D45-8E27-C34240AF61E3}.Release|x64.Build.0 = Release|Any CPU
+		{993CAB42-0819-4D45-8E27-C34240AF61E3}.Release|x86.ActiveCfg = Release|Any CPU
+		{993CAB42-0819-4D45-8E27-C34240AF61E3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

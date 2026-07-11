@@ -76,3 +76,32 @@ if (failed > 0)
     Console.WriteLine("⚠ Some cases failed.");
 }
 #endregion
+
+#region Insert Position Tests
+void AssertIP(int[] nums, int target, int expected, string label)
+{
+    int result = InsertPosition.Solution(nums, target);
+    bool ok = result == expected;
+    if (ok) passed++; else failed++;
+    Console.WriteLine($"{(ok ? "PASS" : "FAIL")} | {label,-42} | target={target,-4} -> got={result}, expected={expected}");
+}
+
+Console.WriteLine();
+Console.WriteLine("=== Insert position tests ===");
+AssertIP(new[] { 2, 5, 8, 12, 16 }, 8, 2, "Target found exactly (middle)");
+AssertIP(new[] { 2, 5, 8, 12, 16 }, 2, 0, "Target found exactly (first index)");
+AssertIP(new[] { 2, 5, 8, 12, 16 }, 16, 4, "Target found exactly (last index)");
+AssertIP(new[] { 2, 5, 8, 12, 16 }, 1, 0, "Target lower than all elements");
+AssertIP(new[] { 2, 5, 8, 12, 16 }, 20, 5, "Target greater than all elements");
+AssertIP(new[] { 2, 5, 8, 12, 16 }, 6, 2, "Target in gap between elements");
+AssertIP(new[] { 2, 5, 8, 12, 16 }, 14, 4, "Target in gap near end");
+AssertIP(new[] { 1, 3, 5, 7, 9 }, 4, 2, "Target in gap in middle");
+
+Console.WriteLine();
+Console.WriteLine($"Total: {passed + failed} | Passed: {passed} | Failed: {failed}");
+if (failed > 0)
+{
+    Console.WriteLine("⚠ Some cases failed.");
+}
+#endregion
+

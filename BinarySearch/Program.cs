@@ -105,3 +105,93 @@ if (failed > 0)
 }
 #endregion
 
+#region Floor and Ceil Tests
+void AssertFC(int[] nums, int x, int expectedFloor, int expectedCeil, string label)
+{
+    int[] result = new FloorAndCeil().Solution(nums, x);
+    bool ok = result[0] == expectedFloor && result[1] == expectedCeil;
+    if (ok) passed++; else failed++;
+    Console.WriteLine($"{(ok ? "PASS" : "FAIL")} | {label,-42} | x={x,-4} -> got=[{result[0]},{result[1]}], expected=[{expectedFloor},{expectedCeil}]");
+}
+
+Console.WriteLine();
+Console.WriteLine("=== Floor and Ceil tests ===");
+AssertFC(new[] { 2, 5, 8, 12, 16 }, 8, 8, 8, "Target found exactly");
+AssertFC(new[] { 2, 5, 8, 12, 16 }, 16, 16, 16, "Target less than all -> no floor");
+AssertFC(new[] { 2, 5, 8, 12, 16 }, 20, 16, -1, "Target greater than all -> no ceil");
+AssertFC(new[] { 2, 5, 8, 12, 16 }, 6, 5, 8, "Target in gap between elements");
+AssertFC(new[] { 2, 3, 3, 3, 5 }, 3, 3, 3, "Duplicates: target equals repeated");
+AssertFC(new[] { 1, 1, 3, 3, 5, 5 }, 4, 3, 5, "Duplicates: target in gap between pairs");
+AssertFC(new[] { 2, 2, 2, 2, 2 }, 2, 2, 2, "Duplicates: all elements equal");
+
+Console.WriteLine();
+Console.WriteLine($"Total: {passed + failed} | Passed: {passed} | Failed: {failed}");
+if (failed > 0)
+{
+    Console.WriteLine("⚠ Some cases failed.");
+}
+#endregion
+
+#region Search Range Tests
+void AssertSR(int[] nums, int target, int expectedLeft, int expectedRight, string label)
+{
+    int[] result = SearchRange.Solution(nums, target);
+    bool ok = result[0] == expectedLeft && result[1] == expectedRight;
+    if (ok) passed++; else failed++;
+    Console.WriteLine($"{(ok ? "PASS" : "FAIL")} | {label,-42} | target={target,-4} -> got=[{result[0]},{result[1]}], expected=[{expectedLeft},{expectedRight}]");
+}
+
+Console.WriteLine();
+Console.WriteLine("=== Search range tests ===");
+AssertSR(new[] { 5, 7, 7, 8, 8, 10 }, 8, 3, 4, "Duplicates in middle");
+AssertSR(new[] { 5, 7, 7, 8, 8, 10 }, 6, -1, -1, "Target not present");
+AssertSR(new[] { 5, 7, 7, 8, 8, 10 }, 5, 0, 0, "Single occurrence at start");
+AssertSR(new[] { 5, 7, 7, 8, 8, 10 }, 10, 5, 5, "Single occurrence at end");
+AssertSR(new[] { 2, 2, 2, 2, 2 }, 2, 0, 4, "All elements equal");
+AssertSR(new int[] { }, 0, -1, -1, "Empty array");
+AssertSR(new[] { 1 }, 1, 0, 0, "Single element present");
+AssertSR(new[] { 1 }, 0, -1, -1, "Single element absent");
+
+Console.WriteLine();
+Console.WriteLine($"Total: {passed + failed} | Passed: {passed} | Failed: {failed}");
+if (failed > 0)
+{
+    Console.WriteLine("⚠ Some cases failed.");
+}
+#endregion
+
+#region Search in a sorted but rotated array
+void AssertSRA(int[] nums, int k, int expected, string label)
+{
+    int result = SearchSortedRotatedArray.Search(nums, k);
+    bool ok = result == expected;
+    if (ok) passed++; else failed++;
+    Console.WriteLine($"{(ok ? "PASS" : "FAIL")} | {label,-42} | k={k,-4} -> got={result}, expected={expected}");
+}
+
+Console.WriteLine();
+Console.WriteLine("=== Search in rotated sorted array tests ===");
+AssertSRA(new[] { 4, 5, 6, 7, 0, 1, 2 }, 0, 4, "Target in right half");
+AssertSRA(new[] { 4, 5, 6, 7, 0, 1, 2 }, 5, 1, "Target in left half");
+AssertSRA(new[] { 4, 5, 6, 7, 0, 1, 2 }, 4, 0, "Target is first element");
+AssertSRA(new[] { 4, 5, 6, 7, 0, 1, 2 }, 2, 6, "Target is last element");
+AssertSRA(new[] { 4, 5, 6, 7, 0, 1, 2 }, 7, 3, "Target at pivot");
+AssertSRA(new[] { 4, 5, 6, 7, 0, 1, 2 }, 9, -1, "Target absent (greater than all)");
+AssertSRA(new[] { 4, 5, 6, 7, 0, 1, 2 }, 3, -1, "Target absent (in gap)");
+AssertSRA(new[] { 1, 3 }, 3, 1, "Two elements, not rotated");
+AssertSRA(new[] { 3, 1 }, 3, 0, "Two elements, pivot at 0, target first");
+AssertSRA(new[] { 3, 1 }, 1, 1, "Two elements, pivot at 0, target last");
+AssertSRA(new[] { 5, 1, 3 }, 3, 2, "Pivot mid, target in right half");
+AssertSRA(new[] { 1, 2, 3, 4, 5 }, 4, 3, "Fully sorted (no pivot)");
+AssertSRA(new[] { 1, 2, 3, 4, 5 }, 0, -1, "Fully sorted, target absent");
+AssertSRA(new[] { 12, 13, 14, 15, 16, 17, 18, 19, 20, 10, 11 }, 11, 10, "Large rotation, target near end");
+AssertSRA(new[] { 1 }, 1, 0, "Single element present");
+AssertSRA(new[] { 1 }, 0, -1, "Single element absent");
+
+Console.WriteLine();
+Console.WriteLine($"Total: {passed + failed} | Passed: {passed} | Failed: {failed}");
+if (failed > 0)
+{
+    Console.WriteLine("⚠ Some cases failed.");
+}
+#endregion

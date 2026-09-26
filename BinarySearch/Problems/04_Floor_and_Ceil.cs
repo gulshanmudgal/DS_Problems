@@ -1,3 +1,29 @@
+// Problem: Floor and Ceil in a Sorted Array
+// Given a sorted array nums of n elements and a target value x, find the
+// floor and ceil of x:
+//   - Floor: the largest element in nums that is <= x.
+//   - Ceil:  the smallest element in nums that is >= x.
+// Return them as a pair {floor, ceil}. If the floor does not exist
+// (x is smaller than every element) or the ceil does not exist
+// (x is larger than every element), use -1 for that entry.
+//
+// Examples:
+//   Input:  nums = [3, 4, 4, 7, 8, 10], x = 5   Output: {4, 7}
+//           (4 is the largest <= 5; 7 is the smallest >= 5)
+//   Input:  nums = [3, 4, 4, 7, 8, 10], x = 8   Output: {8, 8}
+//           (x is present, so it is both its own floor and ceil)
+//   Input:  nums = [3, 4, 4, 7, 8, 10], x = 2   Output: {-1, 3}
+//           (nothing is <= 2, so no floor)
+//   Input:  nums = [3, 4, 4, 7, 8, 10], x = 12  Output: {10, -1}
+//           (nothing is >= 12, so no ceil)
+//
+// Note: both answers fall out of a single lower-bound search. If ind is
+// the first index with nums[ind] >= x, then ceil = nums[ind] (or -1 when
+// ind == n), and floor is either nums[ind] itself (when nums[ind] == x)
+// or nums[ind - 1] (or -1 when ind == 0).
+//
+// Constraints: nums is sorted in non-decreasing order; must run in O(log n).
+
 using System;
 
 namespace BinarySearch

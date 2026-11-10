@@ -1,5 +1,7 @@
 namespace BinarySearch
 {
+    // Question: Given a sorted integer array that may contains only distinct integers and a target,
+    // return the index of the target's first occurrence, or -1 if it is absent.
     public class SearchSortedArray
     {
         public static int Search(int[] nums, int target)
@@ -9,7 +11,7 @@ namespace BinarySearch
 
             while (low <= high)
             {
-                int mid = GetMidIndex(low, high);
+                int mid = low + (high - low)/2;
                 int midValue = nums[mid];
                 if (midValue == target)
                 {
@@ -27,11 +29,6 @@ namespace BinarySearch
             }
 
             return -1;
-        }
-
-        private static int GetMidIndex(int low, int high)
-        {
-            return (low + high) / 2;
         }
     }
 }

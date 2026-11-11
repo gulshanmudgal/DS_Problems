@@ -13,11 +13,7 @@ namespace BinarySearch
             {
                 int mid = low + (high - low)/2;
                 int midValue = nums[mid];
-                if (midValue == target)
-                {
-                    high = mid;
-                }
-                else if (midValue > target)
+                if (midValue >= target)
                 {
                     high = mid;
                 }

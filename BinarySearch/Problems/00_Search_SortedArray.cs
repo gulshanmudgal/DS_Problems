@@ -1,7 +1,7 @@
 namespace BinarySearch
 {
-    // Question: Given a sorted integer array that may contains only distinct integers and a target,
-    // return the index of the target's first occurrence, or -1 if it is absent.
+    // Question: Given an integer array sorted in ascending order containing distinct values and a target, 
+    // return the target’s index, or -1 if it is absent.
     public class SearchSortedArray
     {
         public static int Search(int[] nums, int target)
